@@ -13,5 +13,6 @@ The topics discussed using this app were:
 * IIFE (Immediately Invoked Function Expressions)
 * HTML Forms
 * Writing documentation
+* Naming Conventions
 * Keeping your code DRY
 * Making your code modularized and reusable
