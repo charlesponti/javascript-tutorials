@@ -19,6 +19,9 @@
      */
     var toDoList = new ToDoList(ul, form);
 
+    /**
+     * @desc Load tasks from Local Storage
+     */
     toDoList.loadLocalStore();
 
 })();
