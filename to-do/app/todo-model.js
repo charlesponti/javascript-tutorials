@@ -5,66 +5,64 @@
  * @constructor
  */
 var ToDo = function(task, date, id) {
-    "use strict";
 
-    /**
-     * @cfg {string} task
-     */
-    this.task = task;
+  "use strict";
 
-    /**
-     * @cfg {date} date
-     */
-    this.date = date;
+  /**
+   * @cfg {string} task
+   */
+  this.task = task;
 
-    /**
-     * @cfg {number} id
-     */
-    this.id = id;
+  /**
+   * @cfg {date} date
+   */
+  this.date = date;
 
-    /**
-     * @desc Whether to-do is completed or not
-     * @type {boolean}
-     */
-    this.completed = false;
+  /**
+   * @cfg {number} id
+   */
+  this.id = id;
 
-    this.createCheckBox = function() {
-        var checkbox = document.createElement('input');
-        checkbox.type = "checkbox";
-        checkbox.onclick = this.complete;
-        checkbox.onchange = this.complete;
-        return checkbox;
-    };
+  /**
+   * @desc Whether to-do is completed or not
+   * @type {boolean}
+   */
+  this.completed = false;
 
-    this.createDelete = function() {
-        var deleteLabel = document.createElement('a');
-        deleteLabel.href = '#';
-        deleteLabel.innerHTML = 'Delete!';
-        deleteLabel.dataset.todo = this.id;
-        return deleteLabel;
-    };
+  this.createCheckBox = function() {
+    var checkbox = document.createElement('input');
+    checkbox.type = "checkbox";
+    checkbox.onclick = this.complete;
+    checkbox.onchange = this.complete;
+    return checkbox;
+  };
 
-    /**
-     * @desc Make HTML template for to-do item
-     */
-    this.template = function() {
-        var li = document.createElement('li');
-        var label = document.createElement('label');
-        var checkbox = this.createCheckBox();
-//        var deleteLabel = this.createDelete();
+  this.createDelete = function() {
+    var deleteLabel = document.createElement('button');
+    deleteLabel.href = '#';
+    deleteLabel.innerHTML = 'Delete!';
+    deleteLabel.dataset.todo = this.id;
+    return deleteLabel;
+  };
 
-        label.for = checkbox.id = (this.id || 0);
-//        label.innerHTML = checkbox.outerHTML + this.task + deleteLabel.outerHTML;
-        label.innerHTML = checkbox.outerHTML + this.task;
+  /**
+   * @desc Make HTML template for to-do item
+   * @return {String} HTML template of task
+   */
+  this.template = function() {
+    var li = document.createElement('li');
+    var label = document.createElement('label');
+    var checkbox = this.createCheckBox();
+    var deleteLabel = this.createDelete();
 
-        checkbox.checked = this.completed;
-        li.innerHTML += label.outerHTML;
+    label.for = checkbox.id = (this.id || 0);
+    label.innerHTML = checkbox.outerHTML + this.task + deleteLabel.outerHTML;
+    label.innerHTML = checkbox.outerHTML + this.task;
 
-        return li.outerHTML;
-    };
+    checkbox.checked = this.completed;
+    li.innerHTML += label.outerHTML;
 
-    this.complete = function() {
-
-    }
+    return li.outerHTML;
+  };
 
 };
