@@ -1,11 +1,9 @@
 # JavaScript Tutorial
 
-This is a simple to-do list application I wrote in order to be used when I
-taught a class General Assemb.ly about JavaScript and how to build
-applications with it.
+This repository holds the applications I've written and used when
+teaching JavaScript and how to build client-side applications.
 
-The topics discussed using this app were:
-
+The topics showcased using these apps are:
 * Functions
 * Constructors
 * DOM API
@@ -16,3 +14,4 @@ The topics discussed using this app were:
 * Naming Conventions
 * Keeping your code DRY
 * Making your code modularized and reusable
+* Geolocation & Google Maps
