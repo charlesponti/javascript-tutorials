@@ -1,3 +1,5 @@
+/* global google */
+
 function initialize() {
   var directionsList = document.getElementById('directions');
   var mapEl = document.getElementById("map-canvas");
