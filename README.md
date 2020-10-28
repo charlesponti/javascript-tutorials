@@ -1,9 +1,9 @@
-# JavaScript Tutorial
+# JavaScript School
 
-This repository holds the applications I've written and used when
-teaching JavaScript and how to build client-side applications.
+Lessons I created for teaching JavaScript and application development.
 
 The topics showcased using these apps are:
+* Recursion
 * Functions
 * Constructors
 * DOM API
